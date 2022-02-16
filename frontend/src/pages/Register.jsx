@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { useSelector, userDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import {register, reset} from '../features/auth/authSlice'
+
 function Register() {
   const [formData, setFormData] = useState({
     name: '',
@@ -15,7 +20,7 @@ function Register() {
       ...prevState,
       [e.target.name]: e.target.value,
     }))
-   }
+  }
 
   const onSubmit = (e) => {
     e.preventDefault()
