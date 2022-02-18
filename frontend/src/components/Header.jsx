@@ -1,6 +1,5 @@
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { FaSignInAlt, FaSignOutAlt, FaBullseye } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +17,14 @@ function Header() {
     return (
         <header className='header'>
             <div className='logo'>
-                <Link to='/'>GoalSetter</Link>
+                <Link to='/'>
+                    <h2 style={{
+                        display: 'flex',
+                    }}>
+                        <span>Task Assassain  </span>
+                        <FaBullseye color='#FF7F7F' fontSize='35' />
+                    </h2>
+                </Link>
             </div>
             <ul>
                 {user ? (

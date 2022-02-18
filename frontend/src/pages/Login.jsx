@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaSign, FaSignInAlt } from 'react-icons/fa';
+import { FaUserSecret } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -37,8 +37,8 @@ function Login() {
     }))
   }
 
-  if(isLoading) {
-    return <Spinner/>
+  if (isLoading) {
+    return <Spinner />
   }
 
   const onSubmit = (e) => {
@@ -54,9 +54,9 @@ function Login() {
   return <>
     <section className='heading'>
       <h1>
-        <FaSignInAlt /> Login
+        <FaUserSecret /> Login
       </h1>
-      <p>Login and start setting goals!</p>
+      <p>Login and keep killing it!</p>
     </section>
 
     <section className='form'>
