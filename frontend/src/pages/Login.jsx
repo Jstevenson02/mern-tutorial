@@ -58,12 +58,11 @@ function Login() {
       </h1>
       <p>Login and keep killing it!</p>
     </section>
-
     <section className='form'>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
           <input
-            type='text'
+            type='email'
             className='form-control'
             id='email'
             name='email'
